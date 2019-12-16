@@ -1,4 +1,5 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DanielDondorp/FractalDimension/master)
+Open this repository in binder:[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ChatzigeorgiouGroup/FractalDimension/master?filepath=https%3A%2F%2Fgithub.com%2FChatzigeorgiouGroup%2FFractalDimension%2Fblob%2Fmaster%2Fnotebooks%2FFractal_dimension_algorithm_build_and_test.ipynb)
+
 
 # Box-counting in three dimensional numpy arrays.
 
@@ -32,7 +33,7 @@ plt.show()
 ![png](README_files/README_1_1.png)
 
 
-For a more complete overview of the function and its parameters, have a look at the [notebook](https://mybinder.org/v2/gh/DanielDondorp/FractalDimension/master) detailing the function.
+For a more complete overview of the function and its parameters, have a look at the [notebook](https://mybinder.org/v2/gh/ChatzigeorgiouGroup/FractalDimension/master?filepath=https%3A%2F%2Fgithub.com%2FChatzigeorgiouGroup%2FFractalDimension%2Fblob%2Fmaster%2Fnotebooks%2FFractal_dimension_algorithm_build_and_test.ipynb) detailing the function.
 
 ## Our use case: Fractal Dimension as a measure for cytoskeleton complexity.
 
