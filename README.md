@@ -1,4 +1,4 @@
-Open this repository in binder:[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ChatzigeorgiouGroup/FractalDimension/master?filepath=https%3A%2F%2Fgithub.com%2FChatzigeorgiouGroup%2FFractalDimension%2Fblob%2Fmaster%2Fnotebooks%2FFractal_dimension_algorithm_build_and_test.ipynb)
+Open this repository in binder:[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ChatzigeorgiouGroup/FractalDimension/master)
 
 
 # Box-counting in three dimensional numpy arrays.
@@ -30,10 +30,10 @@ plt.show()
 
 
 
-![png](README_files/README_1_1.png)
+![png](README_notebook_files/README_notebook_1_1.png)
 
 
-For a more complete overview of the function and its parameters, have a look at the [notebook](https://mybinder.org/v2/gh/ChatzigeorgiouGroup/FractalDimension/master?filepath=https%3A%2F%2Fgithub.com%2FChatzigeorgiouGroup%2FFractalDimension%2Fblob%2Fmaster%2Fnotebooks%2FFractal_dimension_algorithm_build_and_test.ipynb) detailing the function.
+For a more complete overview of the function and its parameters, have a look at the notebook detailing the development of the function in binder.
 
 ## Our use case: Fractal Dimension as a measure for cytoskeleton complexity.
 
@@ -71,7 +71,7 @@ for ax, drug, path in zip(axes,drugs, paths):
 ```
 
 
-![png](README_files/README_6_0.png)
+![png](README_notebook_files/README_notebook_6_0.png)
 
 
 
@@ -107,28 +107,28 @@ for path in paths:
 
 
 
-![png](README_files/README_8_1.png)
+![png](README_notebook_files/README_notebook_8_1.png)
 
 
     Fractal Dimention of ./example_data/carbenoxolone.tif: 2.46
 
 
 
-![png](README_files/README_8_3.png)
+![png](README_notebook_files/README_notebook_8_3.png)
 
 
     Fractal Dimention of ./example_data/gadolinium.tif: 2.46
 
 
 
-![png](README_files/README_8_5.png)
+![png](README_notebook_files/README_notebook_8_5.png)
 
 
     Fractal Dimention of ./example_data/2apb.tif: 2.38
 
 
 
-![png](README_files/README_8_7.png)
+![png](README_notebook_files/README_notebook_8_7.png)
 
 
 
