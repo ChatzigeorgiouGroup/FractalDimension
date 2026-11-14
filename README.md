@@ -1,12 +1,12 @@
 Open this repository in binder:[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ChatzigeorgiouGroup/FractalDimension/master)
 
 
-# Box-counting in three dimensional numpy arrays.
+# N-dimensional box-counting in NumPy arrays.
 
 Description from [wikipedia](https://en.wikipedia.org/wiki/Fractal_dimension)
 >In mathematics, more specifically in fractal geometry, a fractal dimension is a ratio providing a statistical index of complexity comparing how detail in a pattern (strictly speaking, a fractal pattern) changes with the scale at which it is measured. It has also been characterized as a measure of the space-filling capacity of a pattern that tells how a fractal scales differently from the space it is embedded in; a fractal dimension does not have to be an integer.
 
-Here we offer a function that calculates the fractal dimension of an object embedded in three dimensional space using the boxcounting method, also known as the [Minkowski-Bouligand](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension) dimension.
+Here we offer a function that estimates the fractal dimension of an object embedded in N-dimensional space using the box-counting method, also known as the [Minkowski-Bouligand](https://en.wikipedia.org/wiki/Minkowski%E2%80%93Bouligand_dimension) dimension.
 
 ### Usage
 Simple example, measuring a box in 3D space.
@@ -31,6 +31,23 @@ plt.show()
 
 
 ![png](README_notebook_files/README_notebook_1_1.png)
+
+`fractal_dimension` accepts arrays with one or more dimensions. Every array axis
+is treated as a geometric dimension, so pass data whose axes have compatible
+units and scales. For OME-TIFF data, select the time point, channel, or z slice
+before calling the function. This keeps file axis conventions outside the
+dimension calculation:
+
+```python
+fd_1d = fractal_dimension(line_x)
+fd_2d = fractal_dimension(image_yx)
+fd_3d = fractal_dimension(volume_zyx)
+fd_4d = fractal_dimension(hypercube_4d)
+
+# For an OME-TIFF time series stored as TCZYX:
+fd_volume = fractal_dimension(ome_tczyx[time, channel])  # ZYX volume
+fd_slice = fractal_dimension(ome_tczyx[time, channel, z])  # YX slice
+```
 
 
 For a more complete overview of the function and its parameters, have a look at the notebook detailing the development of the function in binder.
@@ -81,7 +98,7 @@ def slice_explorer(image):
     @widgets.interact
     def _slice_explorer(im = widgets.fixed(image), plane = (0, len(im)-1)):
         fig, ax = plt.subplots()
-        
+
         ax.imshow(im[plane], cmap = "gray")
     return _slice_explorer
 ```
@@ -100,7 +117,7 @@ for path in paths:
     fd = fractal_dimension(im_t, n_samples = 20, n_offsets= 10, plot=True)
     print(f"Fractal Dimention of {path}: {np.round(fd, 2)}")
     plt.show()
-    
+
 ```
 
     Fractal Dimention of ./example_data/control.tif: 2.5
